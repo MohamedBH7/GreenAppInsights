@@ -1,8 +1,95 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 class="display-4 text-success fw-bold">Welcome to GreenAppInsights</h1>
+        <p class="lead text-muted">Track and analyze your application's performance and sustainability metrics.</p>
+        <a href="/" class="btn btn-outline-success btn-lg mt-3">Go to Dashboard</a>
+    </div>
+
+    <div class="row">
+        <!-- Project Info Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow border-0">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">About the App</h5>
+                </div>
+                <div class="card-body">
+                    <p>
+                        GreenAppInsights is a simple web application built using ASP.NET Core MVC. It aims to help developers monitor system-level insights like resource usage, application logs, and other key indicators of operational behavior.
+                    </p>
+                    <p>
+                        This app emphasizes clean design, maintainability, and scalability for future expansion with real-time logging and analytics integrations.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Stack Table -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow border-0">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0">Technology Stack</h5>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table table-bordered mb-0">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Framework</th>
+                                <td>ASP.NET Core MVC 8</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Language</th>
+                                <td>C# (.NET 8)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">UI Library</th>
+                                <td>Bootstrap 5</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Database</th>
+                                <td>SQL Server</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Architecture</th>
+                                <td>Model-View-Controller (MVC)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Tabs -->
+    <div class="card shadow border-0 mt-4">
+        <div class="card-header bg-secondary text-white">
+            <ul class="nav nav-tabs card-header-tabs" id="featureTabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="overview-tab" data-bs-toggle="tab" href="#overview" role="tab">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="future-tab" data-bs-toggle="tab" href="#future" role="tab">Future Scope</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body tab-content" id="featureTabsContent">
+            <div class="tab-pane fade show active" id="overview" role="tabpanel">
+                <p>
+                    The current implementation includes the homepage, privacy policy, and dashboard routing structure. The UI is responsive and extendable for integrating sustainability KPIs, reporting views, and user-based logs.
+                </p>
+            </div>
+            <div class="tab-pane fade" id="future" role="tabpanel">
+                <ul>
+                    <li>Add real-time system metrics and performance charts</li>
+                    <li>Implement user authentication and role-based access</li>
+                    <li>Integrate database-backed analytics and reports</li>
+                    <li>Develop export functionality and notification modules</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>

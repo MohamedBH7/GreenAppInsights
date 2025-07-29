@@ -1,6 +1,45 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<section class="container py-5">
+    <div class="text-center mb-4">
+        <h1 class="display-4">@ViewData["Title"]</h1>
+        <p class="lead text-muted">Last updated: July 29, 2025</p>
+    </div>
+
+    <div class="border p-4 rounded bg-light shadow-sm">
+        <p>
+            GreenAppInsights is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our application.
+        </p>
+
+        <h4 class="mt-4">1. Information We Collect</h4>
+        <ul>
+            <li>Usage data (metrics, preferences, interactions)</li>
+            <li>Technical data (browser type, IP address)</li>
+        </ul>
+
+        <h4 class="mt-4">2. How We Use Information</h4>
+        <ul>
+            <li>Improve user experience and system performance</li>
+            <li>Monitor system metrics and sustainability KPIs</li>
+            <li>Generate analytics and reports</li>
+        </ul>
+
+        <h4 class="mt-4">3. Data Security</h4>
+        <p>
+            We implement strong security measures and encryption to protect your information from unauthorized access.
+        </p>
+
+        <h4 class="mt-4">4. Third-Party Services</h4>
+        <p>
+            We do not share personal data with third parties. External APIs, if used, follow industry-standard data protection.
+        </p>
+
+        <h4 class="mt-4">5. Contact</h4>
+        <p>
+            For any privacy-related inquiries, contact us at <a href="mailto:malsaffar58@gmail.com">malsaffar58@gmail.com</a>.
+        </p>
+    </div>
+</section>
