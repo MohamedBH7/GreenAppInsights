@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using GreenAppInsights.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace GreenAppInsights.Data
@@ -9,5 +10,8 @@ namespace GreenAppInsights.Data
             : base(options)
         {
         }
+        public DbSet<Metric> Metrics { get; set; }
+        public DbSet<EnergyEstimate> EnergyEstimates { get; set; }
+        public DbSet<OptimizationHint> OptimizationHints { get; set; }
     }
 }

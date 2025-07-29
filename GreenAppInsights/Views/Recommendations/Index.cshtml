@@ -1,0 +1,50 @@
+﻿@model List<GreenAppInsights.Models.OptimizationHint>
+
+@{
+    ViewData["Title"] = "Optimization Recommendations";
+}
+
+<h2>Optimization Recommendations</h2>
+
+@if (!Model.Any())
+{
+    <p>No optimization hints available for this metric.</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Hint</th>
+                <th>Severity</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var hint in Model)
+            {
+                <tr>
+                    <td>@hint.HintText</td>
+                    <td>
+                        @switch (hint.Severity?.ToLower())
+                        {
+                            case "warning":
+                                <span class="text-warning">@hint.Severity</span>
+                                ;
+                                break;
+                            case "info":
+                                <span class="text-info">@hint.Severity</span>
+                                ;
+                                break;
+                            default:
+                                @hint.Severity
+                                ;
+                                break;
+                        }
+                    </td>
+                    <td>@hint.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

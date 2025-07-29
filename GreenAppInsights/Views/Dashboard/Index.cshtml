@@ -1,0 +1,38 @@
+﻿@model GreenAppInsights.ViewModels.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Performance Dashboard</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Endpoint</th>
+            <th>Duration (ms)</th>
+            <th>Memory (MB)</th>
+            <th>Energy (mJ)</th>
+            <th>Timestamp</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var report in Model.Reports)
+        {
+            <tr>
+                <td>@report.Endpoint</td>
+                <td>@report.DurationMs.ToString("F2")</td>
+                <td>@(report.MemoryBytes / 1_000_000.0)</td>
+                <td>@report.EnergyMilliJoules.ToString("F4")</td>
+                <td>@report.Timestamp.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                <td>
+                    <a href="@Url.Action("Index", "Recommendations", new { metricId = report.MetricId })">
+                        Recommendations
+                    </a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
