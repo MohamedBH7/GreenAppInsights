@@ -8,6 +8,8 @@
 
 GreenAppInsights is designed to analyze and report sustainability indicators for software applications or green infrastructure. It gathers data, visualizes trends, and generates actionable insights to help reduce environmental impact.
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/f06e4037-c66c-4dde-a73e-616ef5ef5632" />
+
 ---
 
 ## Features
